@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
-const THEME_NAME = 'deep-keycloak'
+const THEME_NAME = 'keycloak-theme-vuejs-3-ts'
 const entries = ['login', 'register', 'login-reset-password']
 
 module.exports = (env, argv) => {
@@ -85,7 +85,7 @@ module.exports = (env, argv) => {
       })),
       new CopyWebpackPlugin({
         patterns: [
-          { 
+          {
             from: path.resolve(__dirname, 'src', 'static'),
             to: path.resolve(__dirname, '..', 'themes', THEME_NAME, 'login')
           }
@@ -93,7 +93,7 @@ module.exports = (env, argv) => {
       })
     ],
     ...(isDevelopment
-    ? {} 
+    ? {}
     : {
         optimization: {
         removeAvailableModules: false,

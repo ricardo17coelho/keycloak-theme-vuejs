@@ -1,4 +1,3 @@
-import "@/scss/index.scss";
 import Vue from 'vue';
 import vuetify from '@/plugins/vuetify';
 import index from "./index.vue";
