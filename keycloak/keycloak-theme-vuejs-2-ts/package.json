@@ -7,8 +7,6 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "theme:dev": "webpack",
-    "theme:build": "webpack --mode=production",
     "format": "prettier --write ."
   },
   "dependencies": {
@@ -49,8 +47,6 @@
     "vue-cli-plugin-vuetify": "~2.4.7",
     "vue-loader": "15.9.6",
     "vue-template-compiler": "^2.6.11",
-    "vuetify-loader": "^1.7.0",
-    "webpack": "4",
-    "webpack-cli": "^4.9.2"
+    "vuetify-loader": "^1.7.0"
   }
 }
