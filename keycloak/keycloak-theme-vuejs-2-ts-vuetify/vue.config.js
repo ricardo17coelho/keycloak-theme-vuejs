@@ -1,10 +1,11 @@
 const path = require('path');
-const { VueLoaderPlugin } = require('vue-loader');
+// const { VueLoaderPlugin } = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
 
-const THEME_NAME = 'keycloak-theme-vuejs-2-ts';
+const THEME_NAME = 'keycloak-theme-vuejs-2-ts-vuetify';
 const entries = ['login', 'register', 'login-reset-password'];
 const isDevelopment = process.env.NODE_ENV !== 'production' ? true : false;
 
@@ -74,6 +75,7 @@ module.exports = {
     plugins: [
       new CleanWebpackPlugin(),
       // new VueLoaderPlugin(),
+      // new VuetifyLoaderPlugin(),
       ...entries.map(
         (entry) =>
           new HtmlWebpackPlugin({
